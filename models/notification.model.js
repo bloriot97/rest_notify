@@ -6,7 +6,7 @@ const Notifier = require('../notifier');
 const NotificationSchema = mongoose.Schema(schemas.notification);
 
 NotificationSchema.post('save', (doc, next) => {
-  Notifier.notify(doc.title, doc.content);
+  Notifier.notify(doc);
   next();
 });
 

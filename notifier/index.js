@@ -3,12 +3,12 @@ const config = require('config');
 
 const transporter = nodemailer.createTransport(config.mail);
 
-exports.notify = (title, content) => {
+exports.notify = (notification) => {
   const mailOptions = {
     from: config.mail.auth.user,
     to: config.mail_to,
-    subject: title,
-    text: content,
+    subject: notification.title,
+    text: notification.content,
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
