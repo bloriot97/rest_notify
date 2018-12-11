@@ -1,14 +1,27 @@
+const bodyParser = require('body-parser');
 const express = require('express');
-const _ = require('lodash');
-const mongoose = require('mongoose');
 
-//DB setup
-mongoose.connect('mongodb://mongo:27017');
+const routes = require('./routes');
+const db = require('./db');
+const Notifier = require('./notifier');
+
+
+// DB setup
+db.connect();
 
 const app = express();
 
-app.get('/', function(req, res){
-  res.send('Hello World');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/ping', (req, res) => {
+  Notifier.notify('Test', 'Ping');
+  res.send('pong');
 });
 
+app.use('/', routes);
+
 app.listen(3000);
+
+
+module.exports = app; // for testing

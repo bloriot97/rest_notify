@@ -18,10 +18,19 @@
   },
   "homepage": "https://github.com/bloriot97/rest_notify#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.0.0",
     "expres": "0.0.5",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "mongoose": "^5.3.15",
+    "nodemailer": "^4.7.0",
     "nodemon": "^1.18.8"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }

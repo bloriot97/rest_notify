@@ -1,5 +1,5 @@
 # create a file named Dockerfile
-FROM node:argon
+FROM node:latest
 
 RUN mkdir /app
 WORKDIR /app
