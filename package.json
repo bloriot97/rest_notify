@@ -1,0 +1,27 @@
+{
+  "name": "rest_notify",
+  "version": "1.0.0",
+  "description": "Send notification to yourself with a simple POST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloriot97/rest_notify.git"
+  },
+  "author": "Benjamin Loriot <bloriot97@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloriot97/rest_notify/issues"
+  },
+  "homepage": "https://github.com/bloriot97/rest_notify#readme",
+  "dependencies": {
+    "expres": "0.0.5",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.15",
+    "nodemon": "^1.18.8"
+  }
+}
