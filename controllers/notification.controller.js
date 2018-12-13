@@ -1,6 +1,7 @@
 const Notification = require('../models/notification.model.js');
 
 exports.add = (req, res) => {
+  req.body.from = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const notification = new Notification(req.body);
   notification.save()
     .then((data) => {
