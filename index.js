@@ -21,6 +21,8 @@ app.get('/ping', (req, res) => {
 
 app.use('/', routes);
 
+app.use(express.static('website/dist'));
+
 app.listen(3000);
 
 

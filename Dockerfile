@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY ./package.json /app
 RUN npm install
+RUN gulp
 
 COPY ./ /app
 
