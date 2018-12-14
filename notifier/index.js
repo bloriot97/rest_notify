@@ -12,7 +12,7 @@ const template = Handlebars.compile(source);
 exports.notify = (notification) => {
   const mailOptions = {
     from: config.mail.auth.user,
-    to: config.mail_to,
+    to: notification.email,
     subject: notification.title,
     html: template(notification),
   };
